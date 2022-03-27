@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagement", "StoreManagement\StoreManagement.csproj", "{D7A19A03-8D20-4827-A7BF-91F5F0C77C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{6E8E4FA9-BC76-40FC-BFAA-6177D5136E33}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D7A19A03-8D20-4827-A7BF-91F5F0C77C5B} = {D7A19A03-8D20-4827-A7BF-91F5F0C77C5B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A19A03-8D20-4827-A7BF-91F5F0C77C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A19A03-8D20-4827-A7BF-91F5F0C77C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A19A03-8D20-4827-A7BF-91F5F0C77C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A19A03-8D20-4827-A7BF-91F5F0C77C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E8E4FA9-BC76-40FC-BFAA-6177D5136E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E8E4FA9-BC76-40FC-BFAA-6177D5136E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E8E4FA9-BC76-40FC-BFAA-6177D5136E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E8E4FA9-BC76-40FC-BFAA-6177D5136E33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72F4ED47-1D8C-420C-AB5D-422BB87CCFE7}
+	EndGlobalSection
+EndGlobal
