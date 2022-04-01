@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WebClient.LoginReference;
+using WebClient.UserServiceReference;
 
 namespace WebClient.User
 {
@@ -17,17 +17,19 @@ namespace WebClient.User
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            LoginReference.LoginClient lc = new LoginReference.LoginClient();
+            UserServiceReference.UserClient lc = new UserServiceReference.UserClient();
             user u = new user();
             u.Username = TextBox1.Text;
             u.Password = TextBox2.Text;
 
-            bool res = lc.Login(u);
+            int res = lc.Login(u);
 
-            if (res)
+            if (res == 1)
             {
-                Label1.Text = "Ready to use!";
+                Label1.Text = "Ready to use! Seller";
             }
+            else if (res == 0)
+                Label1.Text = "Ready to use ! Customer";
             else
                 Label1.Text = "Invalid Creds or User not Exists!!";
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WebClient.SignUpReference;
+using WebClient.UserServiceReference;
 
 namespace WebClient.User
 {
@@ -17,7 +17,7 @@ namespace WebClient.User
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SignUpReference.SignupClient sc = new SignUpReference.SignupClient();
+            UserServiceReference.UserClient sc = new UserServiceReference.UserClient();
             user u = new user();
             u.Username = TextBox1.Text;
             u.Email = TextBox2.Text;

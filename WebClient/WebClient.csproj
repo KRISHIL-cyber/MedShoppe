@@ -69,25 +69,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LoginReference\service.wsdl" />
-    <None Include="Connected Services\LoginReference\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LoginReference\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LoginReference\StoreManagement.User.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SignUpReference\configuration91.svcinfo" />
-    <None Include="Connected Services\SignUpReference\configuration.svcinfo" />
-    <None Include="Connected Services\SignUpReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\LoginReference\configuration91.svcinfo" />
-    <None Include="Connected Services\LoginReference\configuration.svcinfo" />
-    <None Include="Connected Services\LoginReference\Reference.svcmap">
+    <None Include="Connected Services\UserServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\UserServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\UserServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -96,12 +80,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\LoginReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\SignUpReference\Reference.cs">
+    <Compile Include="Connected Services\UserServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -123,14 +102,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SignUpReference\service.wsdl" />
-    <None Include="Connected Services\SignUpReference\service.xsd">
+    <None Include="Connected Services\UserServiceReference\service.wsdl" />
+    <None Include="Connected Services\UserServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SignUpReference\service1.xsd">
+    <None Include="Connected Services\UserServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SignUpReference\StoreManagement.User.xsd">
+    <None Include="Connected Services\UserServiceReference\StoreManagement.User.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -145,8 +124,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\LoginReference\" />
-    <WCFMetadataStorage Include="Connected Services\SignUpReference\" />
+    <WCFMetadataStorage Include="Connected Services\UserServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

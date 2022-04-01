@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebClient.SignUpReference {
+namespace WebClient.UserServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -139,49 +139,63 @@ namespace WebClient.SignUpReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SignUpReference.ISignup")]
-    public interface ISignup {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserServiceReference.IUser")]
+    public interface IUser {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISignup/Signup", ReplyAction="http://tempuri.org/ISignup/SignupResponse")]
-        bool Signup(WebClient.SignUpReference.user u);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/Signup", ReplyAction="http://tempuri.org/IUser/SignupResponse")]
+        bool Signup(WebClient.UserServiceReference.user u);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISignup/Signup", ReplyAction="http://tempuri.org/ISignup/SignupResponse")]
-        System.Threading.Tasks.Task<bool> SignupAsync(WebClient.SignUpReference.user u);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/Signup", ReplyAction="http://tempuri.org/IUser/SignupResponse")]
+        System.Threading.Tasks.Task<bool> SignupAsync(WebClient.UserServiceReference.user u);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/Login", ReplyAction="http://tempuri.org/IUser/LoginResponse")]
+        int Login(WebClient.UserServiceReference.user u);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/Login", ReplyAction="http://tempuri.org/IUser/LoginResponse")]
+        System.Threading.Tasks.Task<int> LoginAsync(WebClient.UserServiceReference.user u);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISignupChannel : WebClient.SignUpReference.ISignup, System.ServiceModel.IClientChannel {
+    public interface IUserChannel : WebClient.UserServiceReference.IUser, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SignupClient : System.ServiceModel.ClientBase<WebClient.SignUpReference.ISignup>, WebClient.SignUpReference.ISignup {
+    public partial class UserClient : System.ServiceModel.ClientBase<WebClient.UserServiceReference.IUser>, WebClient.UserServiceReference.IUser {
         
-        public SignupClient() {
+        public UserClient() {
         }
         
-        public SignupClient(string endpointConfigurationName) : 
+        public UserClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public SignupClient(string endpointConfigurationName, string remoteAddress) : 
+        public UserClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SignupClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public UserClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SignupClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public UserClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public bool Signup(WebClient.SignUpReference.user u) {
+        public bool Signup(WebClient.UserServiceReference.user u) {
             return base.Channel.Signup(u);
         }
         
-        public System.Threading.Tasks.Task<bool> SignupAsync(WebClient.SignUpReference.user u) {
+        public System.Threading.Tasks.Task<bool> SignupAsync(WebClient.UserServiceReference.user u) {
             return base.Channel.SignupAsync(u);
+        }
+        
+        public int Login(WebClient.UserServiceReference.user u) {
+            return base.Channel.Login(u);
+        }
+        
+        public System.Threading.Tasks.Task<int> LoginAsync(WebClient.UserServiceReference.user u) {
+            return base.Channel.LoginAsync(u);
         }
     }
 }

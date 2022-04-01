@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 namespace StoreManagement.User
 {
     [ServiceContract]
-    public interface ISignup
+    public interface IUser
     {
         [OperationContract]
         bool Signup(user u);
+
+        [OperationContract]
+        int Login(user u);
     }
 
     [DataContract]
