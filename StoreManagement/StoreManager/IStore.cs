@@ -23,6 +23,9 @@ namespace StoreManagement.StoreManager
 
         [OperationContract]
         DataSet Display();
+
+        [OperationContract]
+        DataSet GetById(int id);
     }
 
     [DataContract]

@@ -46,6 +46,9 @@ namespace WebClient.StoreServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool TypeField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -160,6 +163,19 @@ namespace WebClient.StoreServiceReference {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -197,6 +213,12 @@ namespace WebClient.StoreServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStore/Display", ReplyAction="http://tempuri.org/IStore/DisplayResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> DisplayAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStore/GetById", ReplyAction="http://tempuri.org/IStore/GetByIdResponse")]
+        System.Data.DataSet GetById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStore/GetById", ReplyAction="http://tempuri.org/IStore/GetByIdResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetByIdAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -256,6 +278,14 @@ namespace WebClient.StoreServiceReference {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> DisplayAsync() {
             return base.Channel.DisplayAsync();
+        }
+        
+        public System.Data.DataSet GetById(int id) {
+            return base.Channel.GetById(id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetByIdAsync(int id) {
+            return base.Channel.GetByIdAsync(id);
         }
     }
 }

@@ -32,6 +32,7 @@ namespace WebClient.User
                 if (res)
                 {
                     Label1.Text = "Ready To go!";
+                    Response.Redirect("/User/Login.aspx");
                 }
                 else
                     Label1.Text = "User already exist";

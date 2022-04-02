@@ -13,6 +13,10 @@ namespace WebClient.Product
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] == "none")
+            {
+                Response.Redirect("/User/Login.aspx");
+            }
             GetMedicines();
         }
 

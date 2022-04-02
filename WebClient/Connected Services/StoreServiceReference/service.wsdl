@@ -32,6 +32,12 @@
   <wsdl:message name="IStore_Display_OutputMessage">
     <wsdl:part name="parameters" element="tns:DisplayResponse" />
   </wsdl:message>
+  <wsdl:message name="IStore_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="IStore_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IStore">
     <wsdl:operation name="Add">
       <wsdl:input wsaw:Action="http://tempuri.org/IStore/Add" message="tns:IStore_Add_InputMessage" />
@@ -48,6 +54,10 @@
     <wsdl:operation name="Display">
       <wsdl:input wsaw:Action="http://tempuri.org/IStore/Display" message="tns:IStore_Display_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IStore/DisplayResponse" message="tns:IStore_Display_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStore/GetById" message="tns:IStore_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStore/GetByIdResponse" message="tns:IStore_GetById_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IStore" type="tns:IStore">
@@ -81,6 +91,15 @@
     </wsdl:operation>
     <wsdl:operation name="Display">
       <soap:operation soapAction="http://tempuri.org/IStore/Display" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/IStore/GetById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -49,6 +49,21 @@ namespace StoreManagement.StoreManager
             return ds;
         }
 
+        public DataSet GetById(int id)
+        {
+            var con_string = System.Configuration.ConfigurationManager.ConnectionStrings["Model1"].ConnectionString;
+
+            SqlConnection con = new SqlConnection(con_string);
+            DataSet ds = new DataSet();
+            con.Open();
+
+
+            string cmd = "SELECT * FROM Medicines WHERE id="+id;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd, con);
+            adapter.Fill(ds);
+            return ds;
+        }
+
         public bool Update(Medicine m)
         {
             Medicine tmp = m1.medicines.Where(a => a.MedicineName==m.MedicineName && a.BrandName==m.BrandName).SingleOrDefault();
