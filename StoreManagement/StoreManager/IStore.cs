@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -18,13 +19,16 @@ namespace StoreManagement.StoreManager
         bool Delete(int id);
 
         [OperationContract]
-        bool Update(int id, Medicine m);
+        bool Update(Medicine m);
+
+        [OperationContract]
+        DataSet Display();
     }
 
     [DataContract]
     public class Medicine
     {
-        public int id { get; set; }
+        public int Id;
         string categoryname = "default";
         string brandname = "Cipla";
         string medicinename = "Azithromycin";
@@ -48,6 +52,13 @@ namespace StoreManagement.StoreManager
             this.price = price; 
         }
 
+
+        [DataMember]
+        public int id
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
         [DataMember]
         public string CategoryName
         {

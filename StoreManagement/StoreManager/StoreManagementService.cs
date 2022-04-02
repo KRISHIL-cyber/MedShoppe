@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,9 +34,24 @@ namespace StoreManagement.StoreManager
             return true;
         }
 
-        public bool Update(int id, Medicine m)
+        public DataSet Display()
         {
-            Medicine tmp = m1.medicines.Where(a => a.id.Equals(id)).SingleOrDefault();
+            var con_string = System.Configuration.ConfigurationManager.ConnectionStrings["Model1"].ConnectionString;
+
+            SqlConnection con = new SqlConnection(con_string);
+            DataSet ds = new DataSet();
+            con.Open();
+            
+
+            string cmd = "SELECT * FROM Medicines";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd, con);
+            adapter.Fill(ds);
+            return ds;
+        }
+
+        public bool Update(Medicine m)
+        {
+            Medicine tmp = m1.medicines.Where(a => a.MedicineName==m.MedicineName && a.BrandName==m.BrandName).SingleOrDefault();
             if (tmp==null)
                 return false;
 

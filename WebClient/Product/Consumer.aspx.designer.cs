@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace WebClient.HomePage
+namespace WebClient.Product
 {
     public partial class Consumer
     {
