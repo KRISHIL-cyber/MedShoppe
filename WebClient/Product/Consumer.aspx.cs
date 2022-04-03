@@ -16,7 +16,7 @@ namespace WebClient.Product
            
             if (!IsPostBack)
             {
-                if (Session["username"] == "none")
+                if (Session["username"].ToString() == "none")
                 {
                     Response.Redirect("/User/Login.aspx");
                 }
@@ -82,7 +82,7 @@ namespace WebClient.Product
                     continue;
                 }
                 //Label2.Text = quantity.ToString();
-                int pid  = Convert.ToInt32(row.Cells[1].Text);
+                int pid  = Convert.ToInt32(row.Cells[0].Text);
                 
 
                 StoreServiceReference.StoreClient pd = new StoreServiceReference.StoreClient();
@@ -90,7 +90,9 @@ namespace WebClient.Product
                 DataRow dr = ds.Tables[0].Rows[0];
                 Update(dr, quantity);
             }
+            
             Label1.Text = "Total Bill:"+Session["Bill"].ToString();
+            Session["Bill"] = Convert.ToDouble(0);
             GetMedicines();
         }
     }

@@ -13,56 +13,13 @@ namespace WebClient.Product
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == "none")
+            if (Session["username"].ToString() == "none")
             {
                 Response.Redirect("/User/Login.aspx");
             }
             GetMedicines();
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            StoreServiceReference.StoreClient pd = new StoreServiceReference.StoreClient();
-            Medicine m = new Medicine();
-            m.CategoryName = Categories.SelectedValue;
-            m.BrandName = Brandnm.Text.Trim();
-            m.Description = Desc.Text.Trim();
-            m.MedicineName = Medicinenm.Text.Trim();
-            m.ExpDate = Convert.ToDateTime(Expdate.Text);
-            m.Stock = Convert.ToInt32(quantity.Text.Trim());
-            m.Price = (float)Convert.ToDouble(Price.Text.Trim());
-
-            if (RadioButton1.Checked)
-                m.Type = true;
-            else
-                m.Type = false;
-            bool res = pd.Add(m);
-            if (res)
-                Label1.Text = "Successfully Added";
-            else
-            {
-                bool res2 = pd.Update(m);
-                Label1.Text = "Updated Successfully";
-            }
-            GetMedicines();
-            Clear();
-
-        }
-        private void Clear()
-        {
-            Categories.SelectedIndex = -1;
-            Brandnm.Text = string.Empty;
-            Medicinenm.Text = string.Empty;
-            Desc.Text = string.Empty;
-            quantity.Text = string.Empty;
-            Price.Text = string.Empty;
-            Expdate.Text = string.Empty;
-            if (RadioButton1.Checked)
-                RadioButton1.Checked = false;
-            else
-                RadioButton2.Checked = false;
-
-        }
 
         private void GetMedicines()
         {
@@ -71,20 +28,31 @@ namespace WebClient.Product
             GridView1.DataSource = ds;
             GridView1.DataBind();
         }
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
 
-        
-        
+
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int pid = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
             StoreServiceReference.StoreClient pd = new StoreServiceReference.StoreClient();
             pd.Delete(pid);
-            Label1.Text = "Medicine Deleted successfully!";
+            Response.Write("<script>alert('Deleted successfully')</script>");
             GetMedicines();
+        }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            StoreServiceReference.StoreClient pd = new StoreServiceReference.StoreClient();
+            Medicine m = new Medicine();
+            GridViewRow row = GridView1.SelectedRow;
+            m.CategoryName = row.Cells[2].Text;
+            m.BrandName = row.Cells[3].Text;
+            m.Description = row.Cells[4].Text;
+            pd.Update(m);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Product/AddMedicine.aspx");
         }
     }
 }

@@ -31,14 +31,14 @@ namespace WebClient.User
                 bool res = sc.Signup(u);
                 if (res)
                 {
-                    Label1.Text = "Ready To go!";
+                    //Label1.Text = "Ready To go!";
                     Response.Redirect("/User/Login.aspx");
                 }
                 else
-                    Label1.Text = "User already exist";
+                    Response.Write("<script>alert('Already User exists')</script>");
             }
             else
-                Label1.Text = "password dont match";
+                Response.Write("<script>alert('Invalid Password')</script>");
         }
     }
 }

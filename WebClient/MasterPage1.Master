@@ -9,25 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="Product/background.css" rel="stylesheet" />
 
-    <script>
-        function ChangeQ(ele, w) {
-            var sign = ele.id.substring(15);
-            if (w == "M") {
-
-                document.getElementById("GridView1_txtQ_" + sign).value -= 1;
-            }
-            else if (w == "P") {
-                document.getElementById("GridView1_txtQ_" + sign).value = parseInt(document.getElementById("GridView1_txtQ_" + sign).value, 10) + 1;
-            }
-        }
-    </script>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
+
         .navbar {
             margin-bottom: 0;
             border-radius: 0;
@@ -51,7 +42,7 @@
     </asp:ContentPlaceHolder>
 </head>
 
-<body>
+<body >
     <form id="form1" runat="server">
          <div>
 
@@ -67,7 +58,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="/AboutUs/AboutUs.aspx">About Us</a></li>
                         </ul>
                         
                         <ul class="nav navbar-nav navbar-right">
@@ -77,13 +68,12 @@
                     </div>
                 </div>
             </nav>
+             
 
-            <div class="jumbotron">
-
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
                 </asp:ContentPlaceHolder>
-
-            </div>
+            
 
         </div>
     </form>

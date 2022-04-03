@@ -27,18 +27,16 @@ namespace WebClient.User
 
             if (res == 1)
             {
-                Label1.Text = "Ready to use! Seller";
                 Session["username"] = u.Username;
                 Response.Redirect("/Product/Seller.aspx");
             }
             else if (res == 0)
             {
-                Label1.Text = "Ready to use ! Customer";
                 Session["username"] = u.Username;
                 Response.Redirect("/Product/Consumer.aspx");
             }
             else
-                Label1.Text = "Invalid Creds or User not Exists!!";
+                Response.Write("<script>alert('Invalid Password')</script>");
         }
 
         protected void Button2_Click(object sender, EventArgs e)

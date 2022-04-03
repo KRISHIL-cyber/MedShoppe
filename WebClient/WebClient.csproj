@@ -94,13 +94,28 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="AboutUs\AboutUs.aspx" />
+    <Content Include="AboutUs\AboutUs.css" />
+    <Content Include="AboutUs\krishil.jpeg" />
+    <Content Include="AboutUs\luv.png" />
+    <Content Include="backgound.jpg" />
+    <Content Include="Product\AddMedicine.aspx" />
+    <Content Include="Product\background.css" />
     <Content Include="Product\Consumer.aspx" />
     <Content Include="Product\Seller.aspx" />
     <Content Include="User\Login.aspx" />
+    <Content Include="User\Login.css" />
     <Content Include="User\SignUp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\StoreServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +132,13 @@
     </Compile>
     <Compile Include="MasterPage1.Master.designer.cs">
       <DependentUpon>MasterPage1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Product\AddMedicine.aspx.cs">
+      <DependentUpon>AddMedicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\AddMedicine.aspx.designer.cs">
+      <DependentUpon>AddMedicine.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product\Consumer.aspx.cs">
       <DependentUpon>Consumer.aspx</DependentUpon>
