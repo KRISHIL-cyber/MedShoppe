@@ -35,6 +35,9 @@
         .navbar-inverse .navbar-brand {
             color: #24bdc5;
         }
+        body{
+            color:white;
+        }
 
     </style>
 

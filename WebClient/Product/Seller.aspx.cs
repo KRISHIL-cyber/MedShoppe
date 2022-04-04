@@ -39,17 +39,7 @@ namespace WebClient.Product
             GetMedicines();
         }
 
-        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            StoreServiceReference.StoreClient pd = new StoreServiceReference.StoreClient();
-            Medicine m = new Medicine();
-            GridViewRow row = GridView1.SelectedRow;
-            m.CategoryName = row.Cells[2].Text;
-            m.BrandName = row.Cells[3].Text;
-            m.Description = row.Cells[4].Text;
-            pd.Update(m);
-        }
-
+      
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Product/AddMedicine.aspx");

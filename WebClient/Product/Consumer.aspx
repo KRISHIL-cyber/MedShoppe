@@ -10,7 +10,7 @@
     }
  </style>
     <div class ="background1">
-        <asp:GridView ID="GridView1" CssClass="table table-responsive"  runat="server" DataKeyNames="id"  AutoGenerateColumns="False">
+        <asp:GridView ID="GridView1" CssClass="table table-responsive" GridLines="None"  runat="server" DataKeyNames="id"  AutoGenerateColumns="False">
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" HeaderStyle-CssClass = "hideGridColumn" ItemStyle-CssClass="hideGridColumn"/>
                 <asp:BoundField DataField="CategoryName" HeaderText="Category" />
@@ -23,19 +23,19 @@
                 <asp:BoundField DataField="Price" HeaderText="Price" />
                <asp:TemplateField HeaderText="Quantity" ShowHeader="False">  
                    <ItemTemplate>  
-                       <asp:TextBox ID="TextBox1" Width="50px" runat="server"></asp:TextBox>  
+                       <asp:TextBox ID="TextBox1" Width="50px" runat="server" ForeColor="Black"></asp:TextBox>  
                    </ItemTemplate>  
                </asp:TemplateField>  
                 
            </Columns>
         </asp:GridView>
 <p>
-        <asp:Label ID="Label1" runat="server"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Height="40px" Width="100px"></asp:Label>
     </p>
 <p>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Purchase" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Purchase" BackColor="Green"/>
 &nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="Clear" />
+        <asp:Button ID="Button2" runat="server" Text="Clear" BackColor="Red" />
     </p>
 <p>
         &nbsp;</p>

@@ -20,59 +20,51 @@
 
     <form id="form1" runat="server" class="form login">
 
+        <div align="center">
+            <h1>MedShoppe</h1>
+        </div>
       <div class="form__field">
         <label for="login__username"><svg class="icon">
-            <use xlink:href="#icon-user"></use>
           </svg><span class="hidden">Username</span></label>
-        <%--<input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>--%>
           <asp:TextBox  ID="TextBox1" runat="server" class="form__input" placeholder="Username" required="required"></asp:TextBox>
       </div>
 
       <div class="form__field">
         <label for="login__username"><svg class="icon">
-            <use xlink:href="#icon-mail"></use>
           </svg><span class="hidden">Email</span></label>
-        <%--<input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>--%>
           <asp:TextBox ID="TextBox2" runat="server"  class="form__input" placeholder="Email" required="required"></asp:TextBox>
       </div>
 
         <div class="form__field">
         <label for="login__password"><svg class="icon">
-            <use xlink:href="#icon-lock"></use>
           </svg><span class="hidden">Password</span></label>
-        <%--<input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>--%>
           <asp:TextBox  ID="TextBox3" runat="server" TextMode="Password"  class="form__input" placeholder="Password" required="required"></asp:TextBox>
       </div>
 
         <div class="form__field">
         <label for="login__username"><svg class="icon">
-            <use xlink:href="#icon-lock"></use>
           </svg><span class="hidden">Confirm Password</span></label>
-        <%--<input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>--%>
           <asp:TextBox  ID="TextBox4" runat="server" TextMode="Password" class="form__input" placeholder="Confirm Password" required="required"></asp:TextBox>
       </div>
 
         <div class="form__field">
         <label for="login__username"><svg class="icon">
-            <use xlink:href="#icon-user"></use>
           </svg><span class="hidden">Mobile Number</span></label>
-        <%--<input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>--%>
+       
           <asp:TextBox  ID="TextBox5" runat="server" class="form__input" placeholder="Mobile number" required="required"></asp:TextBox>
       </div>
 
         <div class="form__field">
         <label for="login__username"><svg class="icon">
-            <use xlink:href="#icon-user"></use>
           </svg><span class="hidden">Address</span></label>
-        <%--<input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>--%>
-           <textarea id="TextArea1" name="S1" class="form__input"  placeholder="Address aapo" runat="server"></textarea>
+       
+           <textarea id="TextArea1" name="S1" class="form__input"  placeholder="Address!!" runat="server"></textarea>
       </div>
 
         <div class="form__field">
         <label for="login__username"><svg class="icon">
-            <use xlink:href="#icon-user"></use>
-          </svg><span class="hidden">Are you seller?</span></label>
-        <%--<input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>--%>
+          </svg><span class="hidden"></span></label>
+            Seller
           <asp:CheckBox ID="CheckBox1" runat="server" class="form__input"/>
       </div>
 
@@ -103,37 +95,5 @@
   </svg>
 
 </body>
-<%--<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-        <br />
-        Uname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
-        <br />
-        <br />
-        Confirm Password:
-        <asp:TextBox ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
-        <br />
-        <br />
-        Mobilenum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        Address:
-        <textarea id="TextArea1" name="S1" runat="server"></textarea><br />
-        <br />
-&nbsp;Are you a seller?
-        <asp:CheckBox ID="CheckBox1" runat="server" />
-        <br />
-        <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign Up" />
-&nbsp;
-        <asp:Label ID="Label1" runat="server"></asp:Label>
-    </form>
-</body>--%>
+
 </html>

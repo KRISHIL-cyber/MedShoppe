@@ -37,8 +37,8 @@
             <tr>
                 <td class="auto-style3">Category Name</td>
                 <td class="auto-style7">
-        <asp:DropDownList ID="Categories" runat="server">
-            <asp:ListItem>Antibiotics</asp:ListItem>
+        <asp:DropDownList ID="Categories" runat="server" ForeColor="Black">
+            <asp:ListItem Forecolor="Black">Antibiotics</asp:ListItem>
             <asp:ListItem>Antifungals</asp:ListItem>
             <asp:ListItem>Antidepressants</asp:ListItem>
             <asp:ListItem>Antibacterials</asp:ListItem>
@@ -53,7 +53,7 @@
             <tr>
                 <td class="auto-style3">Brand Name</td>
                 <td class="auto-style7">
-        <asp:TextBox ID="Brandnm" runat="server" Height="28px" Width="173px"></asp:TextBox>
+        <asp:TextBox ID="Brandnm" runat="server" Height="28px" Width="173px" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                 </td>
@@ -62,7 +62,7 @@
             <tr>
                 <td class="auto-style3">Medicine Name</td>
                 <td class="auto-style7">
-        <asp:TextBox ID="Medicinenm" runat="server" Height="28px" Width="171px"></asp:TextBox>
+        <asp:TextBox ID="Medicinenm" runat="server" Height="28px" Width="171px" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                 </td>
@@ -83,7 +83,7 @@
             <tr>
                 <td class="auto-style6">Description</td>
                 <td class="auto-style10">
-        <asp:TextBox ID="Desc" runat="server" TextMode="MultiLine" Height="75px" Width="178px"></asp:TextBox>
+        <asp:TextBox ID="Desc" runat="server" TextMode="MultiLine" Height="75px" Width="178px" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                 </td>
@@ -92,7 +92,7 @@
             <tr>
                 <td class="auto-style5">Expiry Date</td>
                 <td class="auto-style9">
-        <asp:TextBox ID="Expdate" runat="server" TextMode="DateTime" Height="26px" Width="109px"></asp:TextBox>
+        <asp:TextBox ID="Expdate" runat="server" TextMode="DateTime" Height="26px" Width="109px" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                 </td>
@@ -101,7 +101,7 @@
             <tr>
                 <td class="auto-style6">Stock</td>
                 <td class="auto-style10">
-        <asp:TextBox ID="quantity" runat="server" TextMode="Number" Height="32px" Width="52px"></asp:TextBox>
+        <asp:TextBox ID="quantity" runat="server" TextMode="Number" Height="32px" Width="52px" ForeColor="Black"></asp:TextBox>
                     <br />
                     <br />
                 </td>
@@ -110,7 +110,7 @@
             <tr>
                 <td class="auto-style6">Price</td>
                 <td class="auto-style10">
-        <asp:TextBox ID="Price" runat="server" Height="25px" Width="78px"></asp:TextBox>
+        <asp:TextBox ID="Price" runat="server" Height="25px" Width="78px" ForeColor="Black"></asp:TextBox>
                     <br />
                 </td>
                 <td>&nbsp;</td>

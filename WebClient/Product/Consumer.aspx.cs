@@ -20,6 +20,7 @@ namespace WebClient.Product
                 {
                     Response.Redirect("/User/Login.aspx");
                 }
+                Session["Bill"] = Convert.ToDouble(0);
                 GetMedicines();
             }
         }

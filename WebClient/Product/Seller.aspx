@@ -24,10 +24,7 @@
                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
                 <ControlStyle BackColor="Red" />
                 </asp:CommandField>
-                <asp:CommandField ButtonType="Button" ShowEditButton="True">
-                <ControlStyle BackColor="Green" />
-                </asp:CommandField>
-
+               
             </Columns>
         </asp:GridView>
 

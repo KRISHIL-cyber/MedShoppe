@@ -12,7 +12,9 @@
   <div class="grid">
 
     <form id="form1" runat="server" class="form login">
-
+        <div align="center">
+            <h1>MedShoppe</h1>
+        </div>
       <div class="form__field">
         <label for="login__username"><svg class="icon">
             <use xlink:href="#icon-user"></use>
